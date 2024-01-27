@@ -21,6 +21,7 @@ public class QuestionManager : MonoBehaviour
 	public GameObject CorrectAnswer;
 		
 	private Question _currentQuestion;
+	private AudioSource _audioSource;
 
 	private void Judge()
 	{
@@ -50,7 +51,7 @@ public class QuestionManager : MonoBehaviour
 		answered = false;
 	}
 
-	void CheckEndGame()
+	private void CheckEndGame()
 	{
 		if (Number == QPool.Questions.Length - 1)
 		{
@@ -60,27 +61,31 @@ public class QuestionManager : MonoBehaviour
 		}
 	}
 
-	void Start()
+	private void Start()
 	{
+		_audioSource = GetComponent<AudioSource>();
+
 		Number = 0;
 		answered = false;
 	}
 
-	void Update()
+	private void Update()
 	{
 		_currentQuestion = QPool.Questions[Number];
 
 		if (answered)
 		{
 			CorrectAnswer.GetComponent<TextMeshProUGUI>().text = _currentQuestion.AnswerText;
-			Photo.sprite = _currentQuestion.AnswerSprite;
+			if (_currentQuestion.AnswerText != null)
+				Photo.sprite = _currentQuestion.AnswerSprite;
 
 			UserAnswer.SetActive(false);
 			CorrectAnswer.SetActive(true);
 		}
 		else
 		{
-			Photo.sprite = _currentQuestion.QuestionSprite;
+			if (_currentQuestion.QuestionSprite != null)
+				Photo.sprite = _currentQuestion.QuestionSprite;
 
 			UserAnswer.SetActive(true);
 			CorrectAnswer.SetActive(false);
@@ -91,9 +96,20 @@ public class QuestionManager : MonoBehaviour
 	{
 		answered = true;
 
+		PlayAnswerAudio();
+
 		Judge();
 
 		CheckEndGame();
+	}
+
+	private void PlayAnswerAudio()
+	{
+		if (_currentQuestion.Audio != null)
+		{
+			_audioSource.clip = _currentQuestion.Audio;
+			_audioSource.Play();
+		}
 	}
 
 }
