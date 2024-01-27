@@ -14,7 +14,9 @@ public class Question : MonoBehaviour
 	public TextAsset AnswerFile;
 	public int Number;
 	public Image QuestionImage;
-	public TMP_InputField UserAnwser;
+
+	public GameObject UserAnswer;
+	public GameObject CorrectAnswer;
 
 	[SerializeField]
 	private Sprite[] _questions;
@@ -49,9 +51,18 @@ public class Question : MonoBehaviour
 		QuestionImage.sprite = _questions[Number];
     }
 
+	private void ShowAnswer()
+	{
+		UserAnswer.SetActive(false);
+		CorrectAnswer.SetActive(true);
+	}
+
 	public void Submit()
 	{
-		if (UserAnwser.text == _answers[Number])
+		CorrectAnswer.GetComponent<TextMeshProUGUI>().text = _answers[Number];
+		ShowAnswer();
+
+		if (UserAnswer.GetComponent<TMP_InputField>().text == _answers[Number])
 		{
 			Debug.Log("Correct!");
 			if (Correct != null)
