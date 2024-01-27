@@ -1154,8 +1154,21 @@ MonoBehaviour:
   Description: {fileID: 6758526909608510791}
   UserAnswer: {fileID: 5806030749463310845}
   CorrectAnswer: {fileID: 4215886096958248698}
+  bgmVolume: 0.7
   openSound: {fileID: 8300000, guid: a74c0f9184c28a4498a9ddc5873af251, type: 3}
+  openSound2: {fileID: 8300000, guid: ccd75f01011c3924e8b6a3e1a6e25727, type: 3}
   endSound: {fileID: 8300000, guid: 8085394365d29264495fccb116658188, type: 3}
+  wrongSounds:
+  - {fileID: 8300000, guid: 2447ffae97b11004daeb05da4abfde2e, type: 3}
+  - {fileID: 8300000, guid: 78bd6fca83460a94a9cd97922c23cf60, type: 3}
+  - {fileID: 8300000, guid: 4b9a6ae611c3afc4bb31ba65cf4c47b8, type: 3}
+  - {fileID: 8300000, guid: b3ab544482e85d24a88979218bb7b0e0, type: 3}
+  - {fileID: 8300000, guid: 539541275a7d93847adf5e847a1f09f4, type: 3}
+  - {fileID: 8300000, guid: 2f50b41a7de3d7a42bdba45b621de811, type: 3}
+  - {fileID: 8300000, guid: dd7b1224eefddd74084f1b1f5aabdb1d, type: 3}
+  - {fileID: 8300000, guid: bb065675a000e614c9bb1fb4638806e7, type: 3}
+  - {fileID: 8300000, guid: 561ed6485391a5842b14154ce6478278, type: 3}
+  - {fileID: 8300000, guid: 4d9e5510ea56c69478bd2795091c4ddf, type: 3}
 --- !u!1 &7638510055775458103
 GameObject:
   m_ObjectHideFlags: 0

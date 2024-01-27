@@ -24,29 +24,41 @@ public class QuestionManager : MonoBehaviour
 	private Question _currentQuestion;
 	private AudioSource _soundSource;
 	private AudioSource _bgmSource;
+	public float bgmVolume = 1;
 
 	public AudioClip openSound;
+	public AudioClip openSound2;
 	public AudioClip endSound;
+	public List<AudioClip> wrongSounds;
 
 	void Awake()
 	{
 		_soundSource = gameObject.AddComponent<AudioSource>();
 		_bgmSource = gameObject.AddComponent<AudioSource>();
+		//_bgmSource 音量設定
+		_bgmSource.volume = bgmVolume;
 	}
 	private void Judge()
 	{
 		_bgmSource.PlayOneShot(endSound);
-		if (_currentQuestion.Audio != null)
-			_soundSource.PlayOneShot(_currentQuestion.Audio);
+
 		if (UserAnswer.GetComponent<TMP_InputField>().text == _currentQuestion.AnswerText)
 		{
 			Debug.Log("Correct!");
+			if (_currentQuestion.Audio != null)
+				_soundSource.PlayOneShot(_currentQuestion.Audio);
 			if (Correct != null)
 				Correct();
 		}
 		else
 		{
 			Debug.Log("Wrong!");
+			//如果 WrongSounds 有東西，就播放 WrongSounds 裡的音效
+			if (wrongSounds.Count > 0)
+			{
+				int index = UnityEngine.Random.Range(0, wrongSounds.Count);
+				_soundSource.PlayOneShot(wrongSounds[index]);
+			}
 			if (Wrong != null)
 				Wrong();
 		}
@@ -79,6 +91,7 @@ public class QuestionManager : MonoBehaviour
 		// Number = 0;
 		answered = false;
 		_bgmSource.PlayOneShot(openSound);
+		_soundSource.PlayOneShot(openSound2);
 	}
 
 	private void Update()
