@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public string sceneName;
+    public Animator logoAnimator;
+    public TransitionTool transitionTool;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,9 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(sceneName);
+        logoAnimator.SetTrigger("play");
+        transitionTool.sceneName = sceneName;
+        transitionTool.LoadScene();
+        // SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
     }
 }
