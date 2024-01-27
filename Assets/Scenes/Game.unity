@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 904182187}
   - component: {fileID: 904182186}
   m_Layer: 0
-  m_Name: Question
+  m_Name: QuestionManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -938,18 +938,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6a198ac4812445aab56efb41744c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuestionFile: {fileID: 4900000, guid: c70edd30c84e2af8888136b2f2699239, type: 3}
-  AnswerFile: {fileID: 4900000, guid: 6368b443b6466ba45bd6d06f8c50d214, type: 3}
+  QPool: {fileID: 11400000, guid: 1eff5de14306cf70a80cdaef7b85e7c0, type: 2}
   Number: 0
-  QuestionImage: {fileID: 199383591}
+  Photo: {fileID: 199383591}
   UserAnswer: {fileID: 1152766708}
   CorrectAnswer: {fileID: 2108956773}
-  _questions:
-  - {fileID: 21300000, guid: 87bdd32416a60b311bfa017db3420076, type: 3}
-  _answers:
-  - test
-  - test
-  - abc
 --- !u!4 &904182187
 Transform:
   m_ObjectHideFlags: 0
@@ -1222,7 +1215,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 904182186}
-        m_TargetAssemblyTypeName: Question, Assembly-CSharp
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
         m_MethodName: Submit
         m_Mode: 1
         m_Arguments:
