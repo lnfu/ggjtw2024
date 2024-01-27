@@ -6,6 +6,7 @@ public class QuestionGameController : MonoBehaviour
 {
     public static int QuestionIndex = 0;
     public GameObject nextBtn;
+    public GameObject backToMenuBtn;
     public TransitionTool transitionTool;
     private QuestionManager _questionManager;
     // Start is called before the first frame update
@@ -14,6 +15,7 @@ public class QuestionGameController : MonoBehaviour
         _questionManager = FindObjectOfType<QuestionManager>();
         _questionManager.Correct += Correct;
         _questionManager.Wrong += Wrong;
+        _questionManager.End += End;
         _questionManager.SpecifyQuestion(QuestionIndex);
     }
 
@@ -35,10 +37,24 @@ public class QuestionGameController : MonoBehaviour
         nextBtn.SetActive(true);
     }
 
+    public void End()
+    {
+        //play sound
+        nextBtn.SetActive(false);
+        backToMenuBtn.SetActive(true);
+    }
+
     public void NextQuestion()
     {
         QuestionIndex++;
         StartCoroutine(WaitAndTriggerTransition());
+    }
+
+    public void BackToMenu()
+    {
+        transitionTool.loadInSameScene = false;
+        transitionTool.sceneName = "MainMenu";
+        TriggerTransition();
     }
 
     public void TriggerTransition()
