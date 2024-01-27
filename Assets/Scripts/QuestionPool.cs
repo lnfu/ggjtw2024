@@ -5,9 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class Question
 {
+	public string Desciption;
 	public Sprite QuestionSprite;
 	public Sprite AnswerSprite;
 	public string AnswerText;
+	public AudioClip Audio;
 }
 
 
