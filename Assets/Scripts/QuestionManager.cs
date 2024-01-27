@@ -102,7 +102,10 @@ public class QuestionManager : MonoBehaviour
 		{
 			CorrectAnswer.GetComponent<TextMeshProUGUI>().text = _currentQuestion.AnswerText;
 			if (_currentQuestion.AnswerText != null)
+			{
 				Photo.sprite = _currentQuestion.AnswerSprite;
+				adjustPhotoSize();
+			}
 
 			UserAnswer.SetActive(false);
 			CorrectAnswer.SetActive(true);
@@ -110,13 +113,33 @@ public class QuestionManager : MonoBehaviour
 		else
 		{
 			if (_currentQuestion.QuestionSprite != null)
+			{
 				Photo.sprite = _currentQuestion.QuestionSprite;
+				adjustPhotoSize();
+			}
 
 			if (!string.IsNullOrEmpty(_currentQuestion.Desciption))
 				Description.text = _currentQuestion.Desciption;
 
 			UserAnswer.SetActive(true);
 			CorrectAnswer.SetActive(false);
+		}
+	}
+
+	private void adjustPhotoSize()
+	{
+		Photo.SetNativeSize();
+		//如果Photo的寬度大於480,就把Photo的大小等比例縮小
+		if (Photo.rectTransform.sizeDelta.x > 480)
+		{
+			float ratio = 480 / Photo.rectTransform.sizeDelta.x;
+			Photo.rectTransform.sizeDelta *= ratio;
+		}
+		//如果Photo的高度大於700,就把Photo的大小等比例縮小
+		if (Photo.rectTransform.sizeDelta.y > 700)
+		{
+			float ratio = 700 / Photo.rectTransform.sizeDelta.y;
+			Photo.rectTransform.sizeDelta *= ratio;
 		}
 	}
 
