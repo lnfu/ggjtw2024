@@ -9,6 +9,7 @@ public class QuestionManager : MonoBehaviour
 {
 	public event Action Correct;
 	public event Action Wrong;
+	public event Action End;
 
 	public QuestionPool QPool;
 
@@ -41,29 +42,29 @@ public class QuestionManager : MonoBehaviour
 	{
 		Number++;
 		answered = false;
-		CheckEndGame();
 	}
 
 	public void SpecifyQuestion(int index)
 	{
 		Number = index;
 		answered = false;
-		CheckEndGame();
 	}
 
 	void CheckEndGame()
 	{
-		if (Number == QPool.Questions.Length)
+		if (Number == QPool.Questions.Length - 1)
 		{
 			Debug.Log("題目沒了");
+			if (End != null)
+				End();
 		}
 	}
 
-    void Start()
-    {
+	void Start()
+	{
 		Number = 0;
 		answered = false;
-    }
+	}
 
 	void Update()
 	{
@@ -91,6 +92,8 @@ public class QuestionManager : MonoBehaviour
 		answered = true;
 
 		Judge();
+
+		CheckEndGame();
 	}
 
 }
