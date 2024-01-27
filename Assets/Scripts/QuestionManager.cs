@@ -13,6 +13,7 @@ public class QuestionManager : MonoBehaviour
 	public QuestionPool QPool;
 
 	public int Number;
+	public bool answered;
 	public Image Photo;
 
 	public GameObject UserAnswer;
@@ -20,28 +21,9 @@ public class QuestionManager : MonoBehaviour
 		
 	private Question _currentQuestion;
 
-    void Start()
-    {
-		Number = 0;
-
-		_currentQuestion = QPool.Questions[Number];
-		Photo.sprite = _currentQuestion.QuestionSprite;
-    }
-
-	private void ShowAnswer()
+	private void Judge()
 	{
-		UserAnswer.SetActive(false);
-		CorrectAnswer.SetActive(true);
-	}
-
-	public void Submit()
-	{
-		string answerText = _currentQuestion.AnswerText;
-		CorrectAnswer.GetComponent<TextMeshProUGUI>().text = answerText;
-
-		ShowAnswer();
-
-		if (UserAnswer.GetComponent<TMP_InputField>().text == answerText)
+		if (UserAnswer.GetComponent<TMP_InputField>().text == _currentQuestion.AnswerText)
 		{
 			Debug.Log("Correct!");
 			if (Correct != null)
@@ -54,4 +36,61 @@ public class QuestionManager : MonoBehaviour
 				Wrong();
 		}
 	}
+
+	public void NextQuestion()
+	{
+		Number++;
+		answered = false;
+		CheckEndGame();
+	}
+
+	public void SpecifyQuestion(int index)
+	{
+		Number = index;
+		answered = false;
+		CheckEndGame();
+	}
+
+	void CheckEndGame()
+	{
+		if (Number == QPool.Questions.Length)
+		{
+			Debug.Log("題目沒了");
+		}
+	}
+
+    void Start()
+    {
+		Number = 0;
+		answered = false;
+    }
+
+	void Update()
+	{
+		_currentQuestion = QPool.Questions[Number];
+
+		if (answered)
+		{
+			CorrectAnswer.GetComponent<TextMeshProUGUI>().text = _currentQuestion.AnswerText;
+			Photo.sprite = _currentQuestion.AnswerSprite;
+
+			UserAnswer.SetActive(false);
+			CorrectAnswer.SetActive(true);
+		}
+		else
+		{
+			Photo.sprite = _currentQuestion.QuestionSprite;
+
+			UserAnswer.SetActive(true);
+			CorrectAnswer.SetActive(false);
+		}
+	}
+
+	public void Answer()
+	{
+		answered = true;
+
+		Judge();
+	}
+
 }

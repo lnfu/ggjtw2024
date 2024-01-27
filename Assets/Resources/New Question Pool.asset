@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: New Question Pool
   m_EditorClassIdentifier: Assembly-CSharp::QuestionPool
   Questions:
-  - QuestionSprite: {fileID: 21300000, guid: 87bdd32416a60b311bfa017db3420076, type: 3}
-    AnswerSprite: {fileID: 21300000, guid: 87bdd32416a60b311bfa017db3420076, type: 3}
+  - QuestionSprite: {fileID: 21300000, guid: 4497d1756fe4fdc4fa1c5663ac84806c, type: 3}
+    AnswerSprite: {fileID: 21300000, guid: 4c5e930140f5e7c43bbc807881cbe2a0, type: 3}
+    AnswerText: test
+  - QuestionSprite: {fileID: 21300000, guid: 2b2817a44e3acd146a9a847618b50c56, type: 3}
+    AnswerSprite: {fileID: 21300000, guid: cc572f76f712b844db128b0b69991e7e, type: 3}
     AnswerText: test
