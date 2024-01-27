@@ -129,3 +129,23 @@ MonoBehaviour:
     AnswerSprite: {fileID: 21300000, guid: feadfbc7689987c49b4389a7d02ea6fe, type: 3}
     AnswerText: "\u6C92\u7259"
     Audio: {fileID: 0}
+  - Desciption: 
+    QuestionSprite: {fileID: 21300000, guid: e4db9a4dfbf827e4a8129d1658b8b664, type: 3}
+    AnswerSprite: {fileID: 21300000, guid: feadfbc7689987c49b4389a7d02ea6fe, type: 3}
+    AnswerText: "\u6C92\u7259"
+    Audio: {fileID: 0}
+  - Desciption: 
+    QuestionSprite: {fileID: 21300000, guid: 14e65179f368a2d45abf1b3dbb6b9e03, type: 3}
+    AnswerSprite: {fileID: 21300000, guid: f70b6a8f0011e7f43a3a955b9f0eb6ca, type: 3}
+    AnswerText: "\u8C93"
+    Audio: {fileID: 0}
+  - Desciption: 
+    QuestionSprite: {fileID: 21300000, guid: 255f2129af83c4ac888b1339559e4ddb, type: 3}
+    AnswerSprite: {fileID: 21300000, guid: 3000b5b1ccf3a4a85bd29c547ffaf041, type: 3}
+    AnswerText: "\u8D85\u54E5"
+    Audio: {fileID: 0}
+  - Desciption: 
+    QuestionSprite: {fileID: 21300000, guid: c56f71c1674cd43e796eeaf8be9aa02a, type: 3}
+    AnswerSprite: {fileID: 21300000, guid: dcdf7f03db70548faaf24ba05107e4d9, type: 3}
+    AnswerText: "\u918B\u98EF\u5929\u689D"
+    Audio: {fileID: 0}
