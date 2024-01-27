@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class TransitionTool : MonoBehaviour
 {
+    [SerializeField] private GameObject transitionTemplate;
     public TransitionSettings transition;
     public float startDelay;
     public string sceneName;
     public bool loadInSameScene = false;
-    
+
     public void LoadScene()
     {
         if (loadInSameScene)
@@ -19,5 +20,10 @@ public class TransitionTool : MonoBehaviour
             return;
         }
         TransitionManager.Instance().Transition(sceneName, transition, startDelay);
+    }
+
+    public void PlayTransition()
+    {
+
     }
 }
