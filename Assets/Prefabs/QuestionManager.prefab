@@ -1151,6 +1151,7 @@ MonoBehaviour:
   Number: 0
   answered: 0
   Photo: {fileID: 2101126993357883936}
+  Description: {fileID: 6758526909608510791}
   UserAnswer: {fileID: 5806030749463310845}
   CorrectAnswer: {fileID: 4215886096958248698}
   openSound: {fileID: 8300000, guid: a74c0f9184c28a4498a9ddc5873af251, type: 3}

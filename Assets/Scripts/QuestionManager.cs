@@ -16,6 +16,7 @@ public class QuestionManager : MonoBehaviour
 	public int Number;
 	public bool answered;
 	public Image Photo;
+	public TextMeshProUGUI Description;
 
 	public GameObject UserAnswer;
 	public GameObject CorrectAnswer;
@@ -97,6 +98,9 @@ public class QuestionManager : MonoBehaviour
 		{
 			if (_currentQuestion.QuestionSprite != null)
 				Photo.sprite = _currentQuestion.QuestionSprite;
+
+			if (!string.IsNullOrEmpty(_currentQuestion.Desciption))
+				Description.text = _currentQuestion.Desciption;
 
 			UserAnswer.SetActive(true);
 			CorrectAnswer.SetActive(false);
