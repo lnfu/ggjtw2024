@@ -1,0 +1,14 @@
+Font: jf-openhuninn-2.0  Style: Regular
+Point Size: 36   SP/PD Ratio: 13.9%
+
+Characters included: 141/142
+Missing characters: 1
+Excluded characters: 0
+
+Characters missing from font file:
+----------------------------------------
+ID: 10	Hex: A	Char [
+]
+
+Characters excluded from packing:
+----------------------------------------
