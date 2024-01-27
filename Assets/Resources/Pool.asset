@@ -99,3 +99,18 @@ MonoBehaviour:
     AnswerSprite: {fileID: 21300000, guid: 2e9f0d25afe694ca78e54db78e545352, type: 3}
     AnswerText: "\u4EBA\u9AD4\u7149\u6210\u9663"
     Audio: {fileID: 0}
+  - Desciption: 
+    QuestionSprite: {fileID: 21300000, guid: 046505071a66086dba6a828b41228906, type: 3}
+    AnswerSprite: {fileID: 21300000, guid: c3edc91ab23f1aef68e4a9c344c2b38e, type: 3}
+    AnswerText: "\u738B\u4E16\u5805"
+    Audio: {fileID: 0}
+  - Desciption: 
+    QuestionSprite: {fileID: 21300000, guid: 11a98829f8358e747a8b80ab0f5a12b1, type: 3}
+    AnswerSprite: {fileID: 21300000, guid: 142611fa324e8de508b7cd0b3d834b18, type: 3}
+    AnswerText: "\u99AC\u82F1\u4E5D"
+    Audio: {fileID: 0}
+  - Desciption: 
+    QuestionSprite: {fileID: 21300000, guid: ec14395a3a053fc368c20af6143f2ff4, type: 3}
+    AnswerSprite: {fileID: 21300000, guid: 66d3924af73a97292ab44a0e1c813bc4, type: 3}
+    AnswerText: "\u4FAF\u53CB\u5B9C"
+    Audio: {fileID: 0}
