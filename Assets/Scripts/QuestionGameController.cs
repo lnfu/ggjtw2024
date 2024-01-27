@@ -9,11 +9,12 @@ public class QuestionGameController : MonoBehaviour
     public TransitionTool transitionTool;
     private QuestionManager _questionManager;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _questionManager = FindObjectOfType<QuestionManager>();
         _questionManager.Correct += Correct;
         _questionManager.Wrong += Wrong;
+        _questionManager.SpecifyQuestion(QuestionIndex);
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class QuestionGameController : MonoBehaviour
 
     public void NextQuestion()
     {
+        QuestionIndex++;
         StartCoroutine(WaitAndTriggerTransition());
     }
 

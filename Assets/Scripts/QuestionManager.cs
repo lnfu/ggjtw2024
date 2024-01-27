@@ -19,12 +19,24 @@ public class QuestionManager : MonoBehaviour
 
 	public GameObject UserAnswer;
 	public GameObject CorrectAnswer;
-		
-	private Question _currentQuestion;
-	private AudioSource _audioSource;
 
+	private Question _currentQuestion;
+	private AudioSource _soundSource;
+	private AudioSource _bgmSource;
+
+	public AudioClip openSound;
+	public AudioClip endSound;
+
+	void Awake()
+	{
+		_soundSource = gameObject.AddComponent<AudioSource>();
+		_bgmSource = gameObject.AddComponent<AudioSource>();
+	}
 	private void Judge()
 	{
+		_bgmSource.PlayOneShot(endSound);
+		if (_currentQuestion.Audio != null)
+			_soundSource.PlayOneShot(_currentQuestion.Audio);
 		if (UserAnswer.GetComponent<TMP_InputField>().text == _currentQuestion.AnswerText)
 		{
 			Debug.Log("Correct!");
@@ -63,10 +75,9 @@ public class QuestionManager : MonoBehaviour
 
 	private void Start()
 	{
-		_audioSource = GetComponent<AudioSource>();
-
-		Number = 0;
+		// Number = 0;
 		answered = false;
+		_bgmSource.PlayOneShot(openSound);
 	}
 
 	private void Update()
@@ -107,8 +118,8 @@ public class QuestionManager : MonoBehaviour
 	{
 		if (_currentQuestion.Audio != null)
 		{
-			_audioSource.clip = _currentQuestion.Audio;
-			_audioSource.Play();
+			_soundSource.clip = _currentQuestion.Audio;
+			_soundSource.Play();
 		}
 	}
 
