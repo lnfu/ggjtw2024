@@ -68,7 +68,7 @@ MonoBehaviour:
     QuestionSprite: {fileID: 21300000, guid: cb1c000563e424e688bbf6b7afcfebef, type: 3}
     AnswerSprite: {fileID: 21300000, guid: 178b3a49a192e42e88b0efb4ffa599b8, type: 3}
     AnswerText: "\u585E\u5B50"
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 6ecaf47222ccf2d42882c3b27053d281, type: 3}
   - Desciption: 
     QuestionSprite: {fileID: 21300000, guid: 20c82d402542b409e98812a6ca680a61, type: 3}
     AnswerSprite: {fileID: 21300000, guid: d184803d214144dc9a094d66db6052b8, type: 3}
@@ -88,12 +88,12 @@ MonoBehaviour:
     QuestionSprite: {fileID: 21300000, guid: 84d111646f90e4d7da84e487a0818483, type: 3}
     AnswerSprite: {fileID: 21300000, guid: 8e3d869e934424c489e589006fb10249, type: 3}
     AnswerText: "\u674E\u5967\u7D0D\u591A\u76AE\u5361\u4E18"
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 3f38817ec6179a5429ef9f0cdb3e0eb5, type: 3}
   - Desciption: 
     QuestionSprite: {fileID: 21300000, guid: 0183d4b8991f84a609cc1e0019851743, type: 3}
     AnswerSprite: {fileID: 21300000, guid: a2693e0d5265b46629a8acc7581b116c, type: 3}
     AnswerText: "\u8D85\u54E5"
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: b6e83ec0354e08545bed89018621b008, type: 3}
   - Desciption: 
     QuestionSprite: {fileID: 21300000, guid: d1a9709c4c0fd4548ba03905e4732ed7, type: 3}
     AnswerSprite: {fileID: 21300000, guid: 2e9f0d25afe694ca78e54db78e545352, type: 3}
@@ -108,7 +108,7 @@ MonoBehaviour:
     QuestionSprite: {fileID: 21300000, guid: 11a98829f8358e747a8b80ab0f5a12b1, type: 3}
     AnswerSprite: {fileID: 21300000, guid: 142611fa324e8de508b7cd0b3d834b18, type: 3}
     AnswerText: "\u99AC\u82F1\u4E5D"
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: dac59107affec814dbe96dd4465d2966, type: 3}
   - Desciption: 
     QuestionSprite: {fileID: 21300000, guid: ec14395a3a053fc368c20af6143f2ff4, type: 3}
     AnswerSprite: {fileID: 21300000, guid: 66d3924af73a97292ab44a0e1c813bc4, type: 3}
@@ -143,9 +143,9 @@ MonoBehaviour:
     QuestionSprite: {fileID: 21300000, guid: 255f2129af83c4ac888b1339559e4ddb, type: 3}
     AnswerSprite: {fileID: 21300000, guid: 3000b5b1ccf3a4a85bd29c547ffaf041, type: 3}
     AnswerText: "\u8D85\u54E5"
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 7c3b907996d742d4682d16a06d207d97, type: 3}
   - Desciption: 
     QuestionSprite: {fileID: 21300000, guid: c56f71c1674cd43e796eeaf8be9aa02a, type: 3}
     AnswerSprite: {fileID: 21300000, guid: dcdf7f03db70548faaf24ba05107e4d9, type: 3}
     AnswerText: "\u918B\u98EF\u5929\u689D"
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 729062b0cf40299408caa198408eafe3, type: 3}
