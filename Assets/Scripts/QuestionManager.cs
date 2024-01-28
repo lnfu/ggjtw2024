@@ -68,7 +68,7 @@ public class QuestionManager : MonoBehaviour
 				Wrong();
 		}
 
-		Invoke("PlayEndSound", 3f);
+		Invoke("PlayEndSound", 1f);
 	}
 
 	public void SpecifyQuestion(int index)
