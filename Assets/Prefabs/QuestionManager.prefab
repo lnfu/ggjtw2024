@@ -1113,7 +1113,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4725558826909176659}
   - component: {fileID: 7774671152175081141}
-  - component: {fileID: 1772685370262814949}
   m_Layer: 0
   m_Name: QuestionManager
   m_TagString: Untagged
@@ -1171,19 +1170,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bb065675a000e614c9bb1fb4638806e7, type: 3}
   - {fileID: 8300000, guid: 561ed6485391a5842b14154ce6478278, type: 3}
   - {fileID: 8300000, guid: 4d9e5510ea56c69478bd2795091c4ddf, type: 3}
---- !u!114 &1772685370262814949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7600162868361478763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed420a91af3a6c2f69425961db13a269, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QPool: {fileID: 11400000, guid: a6dab1712082defbc864de03306e57af, type: 2}
 --- !u!1 &7638510055775458103
 GameObject:
   m_ObjectHideFlags: 0
