@@ -19,6 +19,7 @@ public class QuestionManager : MonoBehaviour
 
 	public GameObject UserAnswer;
 	public GameObject CorrectAnswer;
+	public GameObject Comment;
 
 	private Question _currentQuestion;
 	private AudioSource _soundSource;
@@ -95,12 +96,13 @@ public class QuestionManager : MonoBehaviour
 		if (_answered)
 		{
 			CorrectAnswer.GetComponent<TextMeshProUGUI>().text = _currentQuestion.AnswerText;
+			Comment.GetComponent<TextMeshProUGUI>().text = _currentQuestion.Comment;
 			if (_currentQuestion.AnswerText != null)
 			{
 				Photo.sprite = _currentQuestion.AnswerSprite;
 				adjustPhotoSize();
 			}
-
+			Comment.SetActive(true);
 			UserAnswer.SetActive(false);
 			CorrectAnswer.SetActive(true);
 		}
@@ -114,7 +116,7 @@ public class QuestionManager : MonoBehaviour
 
 			if (!string.IsNullOrEmpty(_currentQuestion.Desciption))
 				Description.text = _currentQuestion.Desciption;
-
+			Comment.SetActive(false);
 			UserAnswer.SetActive(true);
 			CorrectAnswer.SetActive(false);
 		}
