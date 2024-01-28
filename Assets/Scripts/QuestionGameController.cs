@@ -28,13 +28,13 @@ public class QuestionGameController : MonoBehaviour
     public void Correct()
     {
         //play sound
-        nextBtn.SetActive(true);
+        // nextBtn.SetActive(true);
     }
 
     public void Wrong()
     {
         //play sound
-        nextBtn.SetActive(true);
+        // nextBtn.SetActive(true);
     }
 
     public void End()

@@ -14,7 +14,6 @@ public class QuestionManager : MonoBehaviour
 	public QuestionPool QPool;
 
 	public int Number;
-	public bool answered;
 	public Image Photo;
 	public TextMeshProUGUI Description;
 
@@ -24,6 +23,7 @@ public class QuestionManager : MonoBehaviour
 	private Question _currentQuestion;
 	private AudioSource _soundSource;
 	private AudioSource _bgmSource;
+	private bool _answered;
 	public float bgmVolume = 1;
 
 	public AudioClip openSound;
@@ -64,16 +64,11 @@ public class QuestionManager : MonoBehaviour
 		}
 	}
 
-	public void NextQuestion()
-	{
-		Number++;
-		answered = false;
-	}
-
 	public void SpecifyQuestion(int index)
 	{
-		Number = index;
-		answered = false;
+		Number = index % QPool.Questions.Length;
+		_answered = false;
+		CheckEndGame();
 	}
 
 	private void CheckEndGame()
@@ -88,8 +83,7 @@ public class QuestionManager : MonoBehaviour
 
 	private void Start()
 	{
-		// Number = 0;
-		answered = false;
+		_answered = false;
 		_bgmSource.PlayOneShot(openSound);
 		_soundSource.PlayOneShot(openSound2);
 	}
@@ -98,7 +92,7 @@ public class QuestionManager : MonoBehaviour
 	{
 		_currentQuestion = QPool.Questions[Number];
 
-		if (answered)
+		if (_answered)
 		{
 			CorrectAnswer.GetComponent<TextMeshProUGUI>().text = _currentQuestion.AnswerText;
 			if (_currentQuestion.AnswerText != null)
@@ -145,13 +139,12 @@ public class QuestionManager : MonoBehaviour
 
 	public void Answer()
 	{
-		answered = true;
+		_answered = true;
 
 		PlayAnswerAudio();
 
 		Judge();
 
-		CheckEndGame();
 	}
 
 	private void PlayAnswerAudio()
