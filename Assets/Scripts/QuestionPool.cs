@@ -10,6 +10,7 @@ public class Question
 	public Sprite AnswerSprite;
 	public string AnswerText;
 	public AudioClip Audio;
+	public string Comment;
 }
 
 
