@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Difficulty
+{
+    Easy,
+	Medium,
+	Hard,
+};
+
 [System.Serializable]
 public class Question
 {
@@ -11,6 +18,7 @@ public class Question
 	public string AnswerText;
 	public AudioClip Audio;
 	public string Comment;
+	public Difficulty QuestionDifficulty;
 }
 
 

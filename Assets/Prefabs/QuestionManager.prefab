@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
-  m_sharedMaterial: {fileID: -7517314918811633807, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
+  m_sharedMaterial: {fileID: 6928016745429516897, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_text: ???
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
-  m_sharedMaterial: {fileID: -7517314918811633807, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
+  m_sharedMaterial: {fileID: 6928016745429516897, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_text: ???
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
-  m_sharedMaterial: {fileID: -7517314918811633807, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
+  m_sharedMaterial: {fileID: 6928016745429516897, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -982,7 +982,7 @@ MonoBehaviour:
   m_text: "\u6211\u662F\u8AB0?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
-  m_sharedMaterial: {fileID: -7517314918811633807, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
+  m_sharedMaterial: {fileID: 6928016745429516897, guid: f179ad23f5c9c43438c18b6e5afe7487, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1113,6 +1113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4725558826909176659}
   - component: {fileID: 7774671152175081141}
+  - component: {fileID: 1772685370262814949}
   m_Layer: 0
   m_Name: QuestionManager
   m_TagString: Untagged
@@ -1150,11 +1151,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QPool: {fileID: 11400000, guid: a6dab1712082defbc864de03306e57af, type: 2}
   Number: 0
-  answered: 0
   Photo: {fileID: 2101126993357883936}
   Description: {fileID: 6758526909608510791}
   UserAnswer: {fileID: 5806030749463310845}
   CorrectAnswer: {fileID: 4215886096958248698}
+  Comment: {fileID: 0}
   bgmVolume: 0.7
   openSound: {fileID: 8300000, guid: a74c0f9184c28a4498a9ddc5873af251, type: 3}
   openSound2: {fileID: 8300000, guid: ccd75f01011c3924e8b6a3e1a6e25727, type: 3}
@@ -1170,6 +1171,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bb065675a000e614c9bb1fb4638806e7, type: 3}
   - {fileID: 8300000, guid: 561ed6485391a5842b14154ce6478278, type: 3}
   - {fileID: 8300000, guid: 4d9e5510ea56c69478bd2795091c4ddf, type: 3}
+--- !u!114 &1772685370262814949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7600162868361478763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed420a91af3a6c2f69425961db13a269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QPool: {fileID: 11400000, guid: a6dab1712082defbc864de03306e57af, type: 2}
 --- !u!1 &7638510055775458103
 GameObject:
   m_ObjectHideFlags: 0

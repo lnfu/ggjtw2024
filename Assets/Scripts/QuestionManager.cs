@@ -32,12 +32,14 @@ public class QuestionManager : MonoBehaviour
 	public AudioClip endSound;
 	public List<AudioClip> wrongSounds;
 
+
 	void Awake()
 	{
 		_soundSource = gameObject.AddComponent<AudioSource>();
 		_bgmSource = gameObject.AddComponent<AudioSource>();
 		//_bgmSource 音量設定
 		_bgmSource.volume = bgmVolume;
+
 	}
 
 	private void PlayEndSound()
@@ -46,6 +48,7 @@ public class QuestionManager : MonoBehaviour
 	}
 	private void Judge()
 	{
+		float delay = 0f;
 
 		if (UserAnswer.GetComponent<TMP_InputField>().text == _currentQuestion.AnswerText)
 		{
