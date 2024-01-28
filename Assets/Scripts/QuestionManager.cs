@@ -39,9 +39,13 @@ public class QuestionManager : MonoBehaviour
 		//_bgmSource 音量設定
 		_bgmSource.volume = bgmVolume;
 	}
-	private void Judge()
+
+	private void PlayEndSound()
 	{
 		_bgmSource.PlayOneShot(endSound);
+	}
+	private void Judge()
+	{
 
 		if (UserAnswer.GetComponent<TMP_InputField>().text == _currentQuestion.AnswerText)
 		{
@@ -63,6 +67,8 @@ public class QuestionManager : MonoBehaviour
 			if (Wrong != null)
 				Wrong();
 		}
+
+		Invoke("PlayEndSound", 3f);
 	}
 
 	public void SpecifyQuestion(int index)
